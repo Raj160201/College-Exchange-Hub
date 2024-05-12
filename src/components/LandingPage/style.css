@@ -1,0 +1,453 @@
+.container {
+    margin-top: 80px;
+}
+
+.container-faq {
+    margin-top: -40px;
+    padding: 1vw 15vw;
+}
+
+@media (max-width: 768px) {
+    .container-faq {
+        margin-top: -40px;
+        padding: 1vw 5vw;
+    }
+}
+
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    border: none;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.card p {
+    text-align: justify;
+}
+
+.nav-tabs-custom .nav-item .nav-link.active {
+    color: #6c6ff5;
+}
+
+.nav-tabs-custom .nav-item .nav-link {
+    border: none;
+}
+
+.text-muted {
+    color: #6c7681 !important;
+}
+
+.nav-tabs-custom .nav-item {
+    position: relative;
+    color: #271050;
+}
+
+.nav-tabs-custom .nav-item .nav-link.active:after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.nav-tabs-custom .nav-item .nav-link::after {
+    content: "";
+    background: #6c6ff5;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    -webkit-transition: all 250ms ease 0s;
+    transition: all 250ms ease 0s;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+#hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../assets/Img/bgimage.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px 15px 60px 15px;
+    /* Adjusted padding for responsiveness */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero .container {
+    position: relative;
+    text-align: center;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    /* Centering text */
+}
+
+#hero h1 span {
+    color: var(--color-primary);
+}
+
+#hero h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    text-align: center;
+    /* Centering text */
+}
+
+@media (max-width: 1024px) {
+    #hero {
+        background-attachment: scroll;
+        /* Change background attachment for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        height: auto;
+        padding: 10px 15px 30px 15px;
+        /* Adjusted padding for smaller screens */
+    }
+
+    #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #hero h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    padding: 0 0 20px 0;
+    position: relative;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #001973;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-header h2:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--color-primary);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-header p {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 640px) {
+    .section-header h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .section-header span {
+        font-size: 38px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .card {
+    border: 1px solid rgba(14, 29, 52, 0.15);
+    background: #ffffff;
+    position: relative;
+    border-radius: 0;
+    height: 100%;
+}
+
+.services .card .card-img {
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+.services .card .card-img img {
+    transition: 0.3s ease-in-out;
+}
+
+.services .card h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+
+.services .card a {
+    color: #001973;
+    transition: 0.3;
+}
+
+.services .card a:hover {
+    color: var(--color-primary);
+}
+
+.services .card p {
+    padding: 0 30px;
+    margin-bottom: 30px;
+    color: var(--color-secondary);
+    font-size: 15px;
+}
+
+.services .card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Menu Section
+--------------------------------------------------------------*/
+
+#menu .section-header h2 {
+    margin: 5px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #001973;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#menu .section-header h2 span {
+    color: #ffb03b;
+}
+
+#menu {
+    margin-top: -170px;
+}
+
+.menu #menu-flters {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.menu #menu-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: #444444;
+    margin: 0 3px 10px 3px;
+    transition: all ease-in-out 0.3s;
+    background: #fff;
+    border: 2px solid var(--color-primary);
+    border-radius: 50px;
+}
+
+.menu #menu-flters li:hover,
+.menu #menu-flters li.filter-active {
+    color: #fff;
+    background: var(--color-primary);
+}
+
+.menu #menu-flters li:last-child {
+    margin-right: 0;
+}
+
+.menu .menu-content {
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu .menu-content .dietary-preference::after {
+    content: "......................................................................" "...................................................................." "....................................................................";
+    position: absolute;
+    left: 20px;
+    right: 0;
+    top: -4px;
+    z-index: 1;
+    color: #dad8d4;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.menu .menu-content a {
+    padding-right: 10px;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    font-weight: 700;
+    color: #ff9b08;
+}
+
+.menu .menu-content span {
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.menu .menu-img {
+    width: 70px;
+    border-radius: 50%;
+    float: left;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu .menu-ingredients {
+    font-style: italic;
+    font-size: 14px;
+    font-family: "Comic Neue", sans-serif;
+    color: #948c81;
+}
+
+.download-app-container {
+    margin-top: -80px;
+    background-color: #d0d5d8;
+    padding-bottom: 0;
+    margin-bottom: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.download {
+    max-width: 600px;
+    margin-right: auto;
+    padding: 40px 20px;
+    background-color: #d0d5d8;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.download h4 {
+    font-size: 38px;
+    color: #001973;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.download h5 {
+    font-size: 26px;
+    color: #001973;
+    margin-bottom: 15px;
+}
+
+.download p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.playstore {
+    list-style: none;
+    display: flex;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.playstore li {
+    margin-right: 20px;
+}
+
+.playstore a {
+    display: block;
+}
+
+.playstore img {
+    width: 120px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.playstore img:hover {
+    transform: scale(1.1);
+}
+
+.download-app-image {
+    overflow: hidden;
+    background-color: #d0d5d8;
+    border-radius: 10px;
+}
+
+.download-app-image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.download-app-image img:hover {
+    transform: scale(1.05);
+}
+
+.animated-container {
+    animation: fadeInUp 1s forwards 0.5s;
+}
