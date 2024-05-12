@@ -1,9 +1,9 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { db } from '../../Config/Config';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from '../Loader/Loader';
+import { db } from '../../Config/Config';
 import './style.css';
 import '../LandingPage/style.css';
 
@@ -48,9 +48,9 @@ export default function BuyProducts() {
         fetchAndSetProducts();
     }, [fetchFoodProducts]);
 
-    const filteredProducts = selectedFilter === '*'
-        ? products
-        : products.filter((product) => product.category === selectedFilter);
+    const filteredProducts = selectedFilter === '*' ?
+        products :
+        products.filter((product) => product.category === selectedFilter);
 
     return (
         <>
@@ -118,7 +118,7 @@ export default function BuyProducts() {
                                         className={selectedFilter === 'Stationery' ? 'filter-active' : ''}
                                         onClick={() => setSelectedFilter('Stationery')}
                                     >
-                                        Stationary
+                                        Stationery
                                     </li>
                                     <li
                                         data-filter=".filter-others"
@@ -132,7 +132,7 @@ export default function BuyProducts() {
                         </div>
                     </div>
                     <div className="row">
-                        < div className="row menu-container mt-4">
+                        <div className="row menu-container mt-4">
                             {loading ? (
                                 <Loader />
                             ) : (
@@ -140,22 +140,24 @@ export default function BuyProducts() {
                                     <div className="col-lg-4 col-md-6 d-flex align-items-stretch" key={index}>
                                         <div className="member">
                                             <div className="member-img">
-                                                <img src={product.image} class="menu-img" alt=""></img>
+                                                <img src={product.image} className="menu-img" alt="" />
                                             </div>
                                             <div className="member-info">
                                                 <h4>{product.title}</h4>
                                                 <span>{product.category}</span>
                                                 <p><span style={{ fontWeight: 'bold', color: 'black', lineHeight: '15px' }}>{product.details}</span></p>
-                                                <p><span style={{ fontWeight: 'w300', color: 'red' }}>Seller: {product.name}</span></p>
+                                                <p><span style={{ fontWeight: 'w300', color: 'green' }}>Seller: {product.name}</span></p>
+                                                <p><span style={{ fontWeight: 'w300', color: 'red' }}>Contact: {product.phone}</span></p> 
                                                 <p style={{ fontWeight: 'bold', textAlign: 'justify' }}>&#8377;{product.price}</p>
                                             </div>
                                         </div>
                                     </div>
-                                )))}
+                                ))
+                            )}
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
         </>
-    )
+    );
 }

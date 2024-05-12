@@ -139,14 +139,13 @@ export default function RentProducts() {
                                 filteredProducts.map((product, index) => (
                                     <div className="col-lg-4 col-md-6 d-flex align-items-stretch" key={index}>
                                         <div className="member">
-                                            <div className="member-img">
-                                                <img src={product.image} class="menu-img" alt=""></img>
-                                            </div>
+                                          
                                             <div className="member-info">
                                                 <h4>{product.title}</h4>
                                                 <span>{product.category}</span>
                                                 <p><span style={{ fontWeight: 'bold', color: 'black', lineHeight: '15px' }}>{product.details}</span></p>
-                                                <p><span style={{ fontWeight: 'w300', color: 'red' }}>Seller: {product.name}</span></p>
+                                                <p><span style={{ fontWeight: 'w300', color: 'green' }}>Requested by: {product.name}</span></p>
+                                                <p><span style={{ fontWeight: 'w300', color: 'red' }}>Contact: {product.phone}</span></p>
                                                 <p style={{ fontWeight: 'bold', textAlign: 'justify' }}>&#8377;{product.price}</p>
                                             </div>
                                         </div>

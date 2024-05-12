@@ -14,10 +14,10 @@ export default function Banner() {
                     >
                         <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                             <h1>
-                                Your Lightning Fast Delivery Partner<span>.</span>
+                            Unlocking the Campus Marketplace<span>.</span>
                             </h1>
-                            <h2>Delivering Convenience, One Order at a Time.</h2>
-                            <h2>Navigating a Realm of Convenience in Everyday Essentials.</h2>
+                            <h2>Where Students Buy, Sell, and Rent with Ease.</h2>
+                            <h2>Empowering Student Transactions, Simplifying Campus Life.</h2>
                         </div>
                     </div>
                 </div>

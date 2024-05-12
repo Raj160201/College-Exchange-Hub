@@ -72,6 +72,15 @@ export default function OrderHistory() {
         };
     }, []);
 
+    const handleDelete = async (orderId) => {
+        try {
+            await db.collection("itemsToSell").doc(orderId).delete();
+            toast.success("Item deleted successfully!");
+        } catch (error) {
+            toast.error("Error deleting item. Please try again later.");
+        }
+    };
+
     return (
         <>
             {orders.map((order, index) => (
@@ -83,7 +92,7 @@ export default function OrderHistory() {
                                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div className="modal-body text-start text-black p-4">
-                                    <h5 className="modal-title text-uppercase text-center mb-4" id="invoiceModalLabel" style={{ color: "#f37a27", fontWeight: 'bold' }}>Summmary</h5>
+                                    <h5 className="modal-title text-uppercase text-center mb-4" id="invoiceModalLabel" style={{ color: "#f37a27", fontWeight: 'bold' }}>Summary</h5>
                                     <div className="row">
                                         <div className="col mb-1">
                                             <p className="small text-muted mb-1">Seller</p>
@@ -186,21 +195,20 @@ export default function OrderHistory() {
                                                                     <i className="icofont-location-arrow me-2 text-secondary">Product Price: &#8377;{order.productPrice}</i>
                                                                 </div>
                                                             </div>
-                                                            <div className="d-flex justify-content-between">
+                                                            <div className="d-flex justify-content-between mb-3">
                                                                 <button
                                                                     type="button"
-                                                                    className="btn btn-light btn-lg"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target={`#invoiceModal${index}`}
+                                                                    className="btn btn-light btn-sm"
+                                                                    onClick={() => navigate('/contact')}
                                                                 >
-                                                                    <i className="fas fa-info me-2 "></i> Get Details
+                                                                    <i className="icofont-headphone-alt me-1"></i> HELP
                                                                 </button>
                                                                 <button
                                                                     type="button"
-                                                                    className="btn btn-sm btn-outline-primary me-2"
-                                                                    onClick={() => navigate('/contact')}
+                                                                    className="btn btn-sm btn-outline-danger me-4"
+                                                                    onClick={() => handleDelete(order.orderId)}
                                                                 >
-                                                                    <i className="icofont-headphone-alt me-2"></i> HELP
+                                                                    <i className="icofont-ui-delete"></i> Delete
                                                                 </button>
                                                             </div>
                                                         </div>
