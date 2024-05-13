@@ -85,16 +85,16 @@ export default function Login() {
                 className="my-5 display-5 fw-bold ls-tight"
                 style={{ color: "hsl(218, 81%, 95%)" }}
               >
-                The best offer <br />
+                The best place <br />
                 <span style={{ color: "hsl(218, 81%, 75%)" }}>
-                  for your business
+                  for your exchanges
                 </span>
               </h1>
               <p
                 className="mb-4 opacity-70"
                 style={{ color: "hsl(218, 81%, 85%)" }}
               >
-                Welcome to Cravee Jodhpur, your one-stop destination for local food businesses to showcase and sell their delectable products. Discover a wide range of culinary delights right at your doorstep, making it convenient for residents to savor the flavors of Jodhpur's finest offerings!
+                Welcome to Exchange Hub, Where Students Buy, Sell, and Rent with Ease.Empowering Student Transactions, Simplifying Campus Life.
               </p>
             </div>
 
